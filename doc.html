@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup Design</title>
+    <link rel="stylesheet" href="pop.css">
+</head>
+<body>
+   
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">DOCTOR</button>
+        <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-12">
+        <div class="popup" id="popup">
+        <img src="doc.jpeg" width="200px" height="200px">
+        
+        <span><button type="button" id="openButton"  onclick="closePopup()">ok</button></span>
+    </div>
+    </div>
+        </div>
+   
+   
+        <button type="submit" class="btn" onclick="openPopup()">PATIENT</button>
+        <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-12">
+        <div class="popup" id="popup">
+        <img src="pa.jpeg" width="200px" height="200px">
+        
+        <span><button type="button"  onclick="closePopup()">ok</button></span>
+    </div>
+    </div>
+        </div>
+    </div>
+
+   
+   
+    <script>
+        let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+        //let popup = document.getElementById("popup");
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+
+
+        document.getElementById("openButton").addEventListener("click", function() {
+            window.location.href = "sign.html";
+
+        });
+
+
+    </script>
+</body>
+</html>
+
